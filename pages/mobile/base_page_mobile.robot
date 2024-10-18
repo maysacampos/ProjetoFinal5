@@ -11,22 +11,22 @@ Resource    selecionar_produto_page_mobile.robot
 *** Variables ***
 
 ${timeout}    5000ms
-${REMOTE_URL}    https://helenaczats4:c9a2238f-ba4e-4016-bbf7-b1b1800b4615@ondemand.eu-central-1.saucelabs.com:443/wd/hub 
+${REMOTE_URL}    https://${SAUCE_USERNAME}:%{SAUCE_ACCESS_KEY}@ondemand.us-west-1.saucelabs.com:443/wd/hub
 
 *** Keywords ***
  Abrir Application       
-    Open Application    ${REMOTE_URL}
-    ...    platformName=Android
-    ...    appium:platformVersion=9.0
-    ...    appium:deviceName=Samsung Galaxy S9 FHD GoogleAPI Emulator
-    ...    browserName=chrome    
-    ...    appium:automationName=uiautomator2   
-    ...    appium:ensureWebviewsHavePages=${True}   
-    ...    appium:url=https://www.giulianaflores.com.br/    
-    ...    appium:nativeWebScreenshot=${True}     
+    Open Application    ${REMOTE_URL}     
+    ...    platformName=Android    
+    ...    appium:platformVersion=13    
+    ...    appium:deviceName=Samsung Galaxy A23 5G    
+    ...    appium:deviceOrientation=portrait    
+    ...    appium:app=storage:filename=Giuliana Flores_2.0.61_APKPure.apk    
+    ...    appium:appPackage=br.com.giulianaflores.android    
+    ...    appium:ensureWebviewsHavePages=${True}    
+    ...    appium:nativeWebScreenshot=${True}    
+    ...    sauce:options=[object Object]    
     ...    appium:newCommandTimeout=${3600}    
-    ...    appium:connectHardwareKeyboard=${True} 
-    Go To Url    https://www.giulianaflores.com.br/ 
+    ...    appium:connectHardwareKeyboard=${True}
 
     # Verifique os contextos disponíveis
     ${contexts}=    Get Contexts
