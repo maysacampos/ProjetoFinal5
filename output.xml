@@ -1,88 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.2 on win32)" generated="2024-10-20T00:25:17.396129" rpa="false" schemaversion="5">
-<suite id="s1" name="Selecionar Produto Mobile" source="c:\ITERASYS\ProjetoFinal5\tests\mobile\selecionar_produto_mobile.robot">
-<test id="s1-t1" name="Selecionar Produto" line="21">
-<kw name="Open Application" owner="AppiumLibrary">
-<arg>${REMOTE_URL}</arg>
-<arg>platformName=Android</arg>
-<arg>appium:platformVersion=13</arg>
-<arg>appium:deviceName=Samsung Galaxy A23 5G</arg>
-<arg>appium:deviceOrientation=portrait</arg>
-<arg>appium:app=storage:filename=Giuliana Flores_2.0.61_APKPure.apk</arg>
-<arg>appium:appPackage=br.com.giulianaflores.android</arg>
-<arg>appium:ensureWebviewsHavePages=${True}</arg>
-<arg>appium:nativeWebScreenshot=${True}</arg>
-<arg>appium:newCommandTimeout=${3600}</arg>
-<arg>appium:connectHardwareKeyboard=${True}</arg>
-<doc>Opens a new application to given Appium server.
-Capabilities of appium server, Android and iOS,
-Please check https://appium.io/docs/en/2.1/cli/args/
-| *Option*            | *Man.* | *Description*     |
-| remote_url          | Yes    | Appium server url |
-| alias               | no     | alias             |
-| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2024-10-20T00:25:18.210547" elapsed="51.294610"/>
+<robot generator="Robot 7.1 (Python 3.12.2 on win32)" generated="2024-10-20T13:05:29.603079" rpa="false" schemaversion="5">
+<suite id="s1" name="Consulta Produto Mobile Po" source="c:\ITERASYS\ProjetoFinal5\tests\web\consulta_produto_mobile_po.robot">
+<test id="s1-t1" name="Selecionar Flor" line="9">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-10-20T13:05:35.167221" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2024-10-20T13:05:35.166217" elapsed="0.134209">No application is open</status>
 </kw>
-<kw name="Esperar Até Que Elemento Esteja Visível">
-<msg time="2024-10-20T00:26:09.508159" level="FAIL">No keyword with name 'Esperar Até Que Elemento Esteja Visível' found.</msg>
-<arg>xpath=//android.widget.TextView[@text="Rosas"]</arg>
-<status status="FAIL" start="2024-10-20T00:26:09.508159" elapsed="0.003995">No keyword with name 'Esperar Até Que Elemento Esteja Visível' found.</status>
+<msg time="2024-10-20T13:05:35.303424" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2024-10-20T13:05:35.307421" level="FAIL">No application is open</msg>
+<arg>${btn_aceitar_notificacoes}</arg>
+<arg>10000ms</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="FAIL" start="2024-10-20T13:05:35.156221" elapsed="0.158197">No application is open</status>
 </kw>
-<kw name="Clicar Elemento">
-<arg>xpath=//android.widget.TextView[@text="Rosas"]</arg>
-<status status="NOT RUN" start="2024-10-20T00:26:09.514154" elapsed="0.001000"/>
+<kw name="Aceitar notificacoes" owner="selecionar_produto_page_mobile">
+<status status="NOT RUN" start="2024-10-20T13:05:35.318416" elapsed="0.001001"/>
 </kw>
-<kw name="Esperar Até Que Elemento Esteja Visível">
-<arg>xpath=//android.widget.TextView[@text="${PRODUCT_NAME}"]</arg>
-<status status="NOT RUN" start="2024-10-20T00:26:09.518154" elapsed="0.000998"/>
+<kw name="Switch To Context" owner="AppiumLibrary">
+<arg>CHROMIUM</arg>
+<doc>Switch to a new context</doc>
+<status status="NOT RUN" start="2024-10-20T13:05:35.322416" elapsed="0.000000"/>
 </kw>
-<kw name="Obter Texto">
-<var>${price}</var>
-<arg>xpath=//android.widget.TextView[@text="${PRODUCT_NAME}"]/following-sibling::android.widget.TextView</arg>
-<status status="NOT RUN" start="2024-10-20T00:26:09.520151" elapsed="0.000999"/>
+<kw name="Aceitar cookies" owner="selecionar_produto_page_mobile">
+<status status="NOT RUN" start="2024-10-20T13:05:35.325412" elapsed="0.001999"/>
 </kw>
-<kw name="Deve Ser Igual">
-<arg>${price}</arg>
-<arg>${PRODUCT_PRICE}</arg>
-<status status="NOT RUN" start="2024-10-20T00:26:09.522149" elapsed="0.000000"/>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${lbl_nome_produto_um}</arg>
+<arg>10000ms</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" start="2024-10-20T13:05:35.329409" elapsed="0.000000"/>
 </kw>
-<kw name="Clicar Elemento">
-<arg>xpath=//android.widget.TextView[@text="${PRODUCT_NAME}"]</arg>
-<status status="NOT RUN" start="2024-10-20T00:26:09.523150" elapsed="0.000000"/>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<arg>${lbl_nome_produto_um}</arg>
+<arg>Ilustre Mini Orquídea Phalaenopsis Lilás</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-10-20T13:05:35.331408" elapsed="0.000000"/>
 </kw>
-<kw name="Esperar Até Que Elemento Esteja Visível">
-<arg>xpath=//android.widget.TextView[@text="ADICIONAR AO CARRINHO"]</arg>
-<status status="NOT RUN" start="2024-10-20T00:26:09.523965" elapsed="0.001565"/>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<arg>${lbl_preco_produto_um}</arg>
+<arg>R$ 59,90</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-10-20T13:05:35.332407" elapsed="0.000000"/>
 </kw>
-<kw name="Clicar Elemento">
-<arg>xpath=//android.widget.TextView[@text="ADICIONAR AO CARRINHO"]</arg>
-<status status="NOT RUN" start="2024-10-20T00:26:09.525705" elapsed="0.001000"/>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${img_produto_um}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" start="2024-10-20T13:05:35.333411" elapsed="0.000000"/>
 </kw>
-<kw name="Clicar Elemento">
-<arg>xpath=//android.widget.TextView[@text="CARRINHO"]</arg>
-<status status="NOT RUN" start="2024-10-20T00:26:09.527705" elapsed="0.000000"/>
+<kw name="Clicar no produto" owner="selecionar_produto_page_mobile">
+<status status="NOT RUN" start="2024-10-20T13:05:35.336409" elapsed="0.000000"/>
 </kw>
-<kw name="Esperar Até Que Elemento Esteja Visível">
-<arg>xpath=//android.widget.TextView[@text="${PRODUCT_NAME}"]</arg>
-<status status="NOT RUN" start="2024-10-20T00:26:09.528704" elapsed="0.000000"/>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${lbl_nome_produto_dois}</arg>
+<arg>10000ms</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" start="2024-10-20T13:05:35.338403" elapsed="0.000000"/>
 </kw>
-<kw name="Obter Texto">
-<var>${cart_price}</var>
-<arg>xpath=//android.widget.TextView[@text="${PRODUCT_NAME}"]/following-sibling::android.widget.TextView</arg>
-<status status="NOT RUN" start="2024-10-20T00:26:09.531705" elapsed="0.001000"/>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<arg>${lbl_nome_produto_dois}</arg>
+<arg>ILUSTRE MINI ORQUÍDEA PHALAENOPSIS LILÁS</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-10-20T13:05:35.338403" elapsed="0.001000"/>
 </kw>
-<kw name="Deve Ser Igual">
-<arg>${cart_price}</arg>
-<arg>${PRODUCT_PRICE}</arg>
-<status status="NOT RUN" start="2024-10-20T00:26:09.534702" elapsed="0.000999"/>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<arg>${lbl_preco_produto_dois}</arg>
+<arg>R$ 59,90</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-10-20T13:05:35.340403" elapsed="0.000000"/>
 </kw>
-<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
-<doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" start="2024-10-20T00:26:09.536700" elapsed="1.341399"/>
+<kw name="Preencher campo CEP" owner="selecionar_dia_entrega_page_mobile">
+<status status="NOT RUN" start="2024-10-20T13:05:35.354395" elapsed="0.000000"/>
 </kw>
-<status status="FAIL" start="2024-10-20T00:25:18.206548" elapsed="52.675519">No keyword with name 'Esperar Até Que Elemento Esteja Visível' found.</status>
+<kw name="Preencher inicio do campo CEP" owner="selecionar_dia_entrega_page_mobile">
+<arg>04535</arg>
+<status status="NOT RUN" start="2024-10-20T13:05:35.356394" elapsed="0.000000"/>
+</kw>
+<kw name="Preencher prefixo do campo CEP" owner="selecionar_dia_entrega_page_mobile">
+<arg>902</arg>
+<status status="NOT RUN" start="2024-10-20T13:05:35.358395" elapsed="0.003001"/>
+</kw>
+<kw name="Clicar botao OK" owner="selecionar_dia_entrega_page_mobile">
+<status status="NOT RUN" start="2024-10-20T13:05:35.362391" elapsed="0.000999"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${ico_dia}</arg>
+<arg>10000ms</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" start="2024-10-20T13:05:35.364389" elapsed="0.000999"/>
+</kw>
+<kw name="Escolher Data de Entrega" owner="selecionar_dia_entrega_page_mobile">
+<status status="NOT RUN" start="2024-10-20T13:05:35.367387" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${ico_turno}</arg>
+<arg>10000ms</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" start="2024-10-20T13:05:35.370386" elapsed="0.001999"/>
+</kw>
+<kw name="Confirmar Turno de Entrega" owner="selecionar_dia_entrega_page_mobile">
+<status status="NOT RUN" start="2024-10-20T13:05:35.381379" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${lbl_nome_produto_tres}</arg>
+<arg>20000ms</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" start="2024-10-20T13:05:35.382379" elapsed="0.000999"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<arg>${lbl_nome_produto_tres}</arg>
+<arg>Ilustre Mini Orquídea Phalaenopsis Lilás</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-10-20T13:05:35.385376" elapsed="0.001000"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<arg>${lbl_preco_produto_tres}</arg>
+<arg>R$ 59,90</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-10-20T13:05:35.390374" elapsed="0.002998"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${ico_continuar}</arg>
+<arg>10000ms</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" start="2024-10-20T13:05:35.398371" elapsed="0.000000"/>
+</kw>
+<kw name="Clicar no botao Continuar" owner="confirma_dados_compra_page_mobile">
+<status status="NOT RUN" start="2024-10-20T13:05:35.400370" elapsed="0.001997"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${txt_pg_quatro}</arg>
+<arg>10000ms</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" start="2024-10-20T13:05:35.404366" elapsed="0.000000"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<arg>${txt_pg_quatro}</arg>
+<arg>DIGITE SEU E-MAIL OU CPF</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-10-20T13:05:35.405367" elapsed="0.000998"/>
+</kw>
+<status status="FAIL" start="2024-10-20T13:05:35.122242" elapsed="0.292119">No application is open</status>
 </test>
-<status status="FAIL" start="2024-10-20T00:25:17.436109" elapsed="53.456821"/>
+<status status="FAIL" start="2024-10-20T13:05:29.653624" elapsed="5.765733"/>
 </suite>
 <statistics>
 <total>
@@ -91,9 +152,13 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Selecionar Produto Mobile">Selecionar Produto Mobile</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Consulta Produto Mobile Po">Consulta Produto Mobile Po</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-10-20T13:05:29.833374" level="ERROR">Error in file 'c:\ITERASYS\ProjetoFinal5\pages\base_page_mobile.robot' on line 43: Creating keyword 'Abrir Application' failed: Keyword with same name defined multiple times.</msg>
+<msg time="2024-10-20T13:05:34.999500" level="ERROR">Error in file 'c:\ITERASYS\ProjetoFinal5\pages\base_page_mobile.robot' on line 5: Resource setting requires value.</msg>
+<msg time="2024-10-20T13:05:35.114248" level="ERROR">Error in file 'c:\ITERASYS\ProjetoFinal5\pages\base_page_mobile.robot' on line 14: Setting variable '${REMOTE_URL}' failed: Variable '${SAUCE_USERNAME}' not found.</msg>
+<msg time="2024-10-20T13:05:35.303424" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>

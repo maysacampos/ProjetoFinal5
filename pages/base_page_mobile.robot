@@ -2,7 +2,7 @@
 
 #Library    SeleniumLibrary
 Library    AppiumLibrary
-
+Resource    
 Resource    login_page_mobile.robot
 Resource    confirma_dados_compra_page_mobile.robot
 Resource    selecionar_dia_entrega_page_mobile.robot

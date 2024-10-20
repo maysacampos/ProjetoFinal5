@@ -13,9 +13,17 @@ Test Teardown     Close Application
 
 *** Variables ***
 ${SAUCE_USERNAME}    oauth-maysacampos06-e170f    
-${REMOTE_URL}    https://${SAUCE_USERNAME}:%{SAUCE_ACCESS_KEY}@ondemand.us-west-1.saucelabs.com:443/wd/hub
+${REMOTE_URL}        https://${SAUCE_USERNAME}:%{SAUCE_ACCESS_KEY}@ondemand.us-west-1.saucelabs.com:443/wd/hub
 ${PRODUCT_NAME}      Buquê de 24 Rosas Vermelhas e Pink
 ${PRODUCT_PRICE}     R$ 189,90
+${SAUCE_USERNAME}    oauth-maysacampos06-e170f    
+${CEP}               30411312
+${DATA_ENTREGA}      2024.10.31
+${NOME_PRODUTO}      Buquê Fascínio de Rosas Colombianas Vermelhas
+${PRECO_PRODUTO}     $202,93
+${btn_ok}            xpath=//body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[14]/div[1]/div[1]/span[2]
+${ico_continuar}     xpath=//a[@id='ContentSite_Basketcontrol1_rptBasket_imbFinalize_0']
+${txt_login}         xpath=//span[contains(text(),'DIGITE SEU E-MAIL OU CPF')]
 
 *** Test Cases ***
 Selecionar Produto
@@ -32,23 +40,29 @@ Selecionar Produto
     ...    appium:newCommandTimeout=${3600}    
     ...    appium:connectHardwareKeyboard=${True}
 
-    Esperar Até Que Elemento Esteja Visível    xpath=//android.widget.TextView[@text="Rosas"]
-    Clicar Elemento    xpath=//android.widget.TextView[@text="Rosas"]
+Go To App  
+    #Escolher Produtos
+    Wait Until Page Contains Element    ${NOME_PRODUTO}   10000ms
+    Element Text Should Be    ${NOME_PRODUTO}    Buquê Fascínio de Rosas Colombianas Vermelhas
+    Element Text Should Be    ${PRECO_PRODUTO}    $202,93
     
-    Esperar Até Que Elemento Esteja Visível    xpath=//android.widget.TextView[@text="${PRODUCT_NAME}"]
-    ${price}    Obter Texto    xpath=//android.widget.TextView[@text="${PRODUCT_NAME}"]/following-sibling::android.widget.TextView
+    #Escolher dia e turno entrega  
+    Click Element    ${CEP} 
+    Input Text    ${CEP}    30411312
     
-    # Valida nome e preço na página do produto
-    Deve Ser Igual    ${price}    ${PRODUCT_PRICE}
+    Click Element    ${btn_ok}
     
-    Clicar Elemento    xpath=//android.widget.TextView[@text="${PRODUCT_NAME}"]
-    
-    Esperar Até Que Elemento Esteja Visível    xpath=//android.widget.TextView[@text="ADICIONAR AO CARRINHO"]
-    Clicar Elemento    xpath=//android.widget.TextView[@text="ADICIONAR AO CARRINHO"]
+    Wait Until Page Contains Element    ${DATA_ENTREGA}   10000ms
+    Click Element    ${DATA_ENTREGA}   
+   
+    #Confirmar compra
+    Wait Until Page Contains Element    ${NOME_PRODUTO}   20000ms
+    Element Text Should Be    ${NOME_PRODUTO}    Buquê Fascínio de Rosas Colombianas Vermelhas
+    Element Text Should Be    ${PRECO_PRODUTO}    $202,93
 
-    # Valida no carrinho
-    Clicar Elemento    xpath=//android.widget.TextView[@text="CARRINHO"]
-    Esperar Até Que Elemento Esteja Visível    xpath=//android.widget.TextView[@text="${PRODUCT_NAME}"]
-    
-    ${cart_price}    Obter Texto    xpath=//android.widget.TextView[@text="${PRODUCT_NAME}"]/following-sibling::android.widget.TextView
-    Deve Ser Igual    ${cart_price}    ${PRODUCT_PRICE}
+    Wait Until Page Contains Element    ${ico_continuar}   10000ms
+    Click Element    ${ico_continuar}
+
+    #Digite seu e-mail ou CPF
+    Wait Until Page Contains Element    ${txt_login}   10000ms
+    Element Text Should Be   ${txt_login}    DIGITE SEU E-MAIL OU CPF    
