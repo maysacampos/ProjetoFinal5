@@ -17,3 +17,7 @@ Aceitar cookies
 
 Clicar no produto
     Click Element    ${img_produto_um}
+
+Selecionar Produto
+    Aceitar notificacoes
+    Clicar no produto

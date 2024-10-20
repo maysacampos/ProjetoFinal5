@@ -38,3 +38,8 @@ ${REMOTE_URL}    https://${SAUCE_USERNAME}:%{SAUCE_ACCESS_KEY}@ondemand.us-west-
 
 Fechar Application  
     Close All Applications
+
+*** Keywords ***
+Abrir Application
+    Open Application    ${REMOTE_URL}
+    

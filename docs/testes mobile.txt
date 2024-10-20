@@ -1,38 +1,5 @@
 Testes Mobile
 
-O que são aplicações Mobile?
-- app - aplicativos para smartphone (Android e iOS)
-- tablets
-- smartvs
-- sistemas embarcados em veiculos (GPS / AV)
-- sistemas embarcados em eletrodomésticos
-- smartwatches
-- smartband
-- smartwear (vestiveis)
-
-Tipos de Desenvolvimento / Aplicativos Mobile
-- Web App: Falso aplicativo - site formatado como se fosse um app
-- Nativo: Feito sob medida para o Android OU iOS
-- Hibrido: Um time trabalha em um projeto que produz os 2 Apps
-
-O tempo de automação para testes mobile acaba sendo 30 a 50% maior
-O que demora é a configuração inicial e o mapeamento
-
-Os testes automatizados podem ser realizados:
-- Localmente:
----> Conectar o celular no computador via cabo USB
-     (Ativar o modo desenvolvedor / Autorizar)
----> Emulador
-- Remoto:
----> Aparelhos fisicos
----> Emulador
-
-
-Computador ou Notebook Ideal
-- Processador i5 ou superior, 10ª geração em diante
-- Memória RAM: 16 GB
-- HD: SSD 500 GB
-
 Configuração inicial
 - Cenario do Teste Remoto
 1 - Escolher um fornecedor e criar uma conta (www.saucelabs.com)
@@ -49,7 +16,6 @@ Configuração inicial
 10 - Importar, ajustar e programar complementos
 
 
-
 Configuração de armazenamento das seriais (Sauce Access Key)
 
 Temporária - Qualquer usuário consegue utilizar
@@ -59,3 +25,4 @@ giuliana flores
 
 Giuliana Flores_2.0.56_APKPure.apk
 Set-Item -Path Env:\SAUCE_ACCESS_KEY -Value 'b404dc06-330a-4383-9a24-b57c77f155ec'
+

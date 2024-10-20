@@ -1,5 +1,9 @@
 *** Settings ***
-Resource    ../../../pages\mobile\base_page_mobile.robot
+Resource          ../../pages/base_page_mobile.robot    
+Resource          ../../pages/login_page_mobile.robot
+Resource          ../../pages/selecionar_produto_page_mobile.robot
+Resource          ../../pages/confirma_dados_compra_page_mobile.robot
+Resource          ../../pages/selecionar_dia_entrega_page_mobile.robot
 
 *** Test Cases ***
 Selecionar Flor

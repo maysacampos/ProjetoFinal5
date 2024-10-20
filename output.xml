@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.2 on win32)" generated="2024-10-17T22:01:10.328641" rpa="false" schemaversion="5">
-<suite id="s1" name="Giuliana Flores Mobile" source="c:\ITERASYS\ProjetoFinal5\tests\web\mobile\giuliana_flores_mobile.robot">
+<robot generator="Robot 7.1 (Python 3.12.2 on win32)" generated="2024-10-20T00:25:17.396129" rpa="false" schemaversion="5">
+<suite id="s1" name="Selecionar Produto Mobile" source="c:\ITERASYS\ProjetoFinal5\tests\mobile\selecionar_produto_mobile.robot">
 <test id="s1-t1" name="Selecionar Produto" line="21">
 <kw name="Open Application" owner="AppiumLibrary">
-<msg time="2024-10-17T22:01:10.776971" level="FAIL">Variable '${REMOTE_URL}' not found.</msg>
 <arg>${REMOTE_URL}</arg>
 <arg>platformName=Android</arg>
 <arg>appium:platformVersion=13</arg>
@@ -22,145 +21,68 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="FAIL" start="2024-10-17T22:01:10.775950" elapsed="0.003998">Variable '${REMOTE_URL}' not found.</status>
+<status status="PASS" start="2024-10-20T00:25:18.210547" elapsed="51.294610"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ImageView</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.785945" elapsed="0.000000"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ImageView</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.791943" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>xpath=//android.widget.TextView[@text="Pular"]</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.797940" elapsed="0.002007"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<arg>xpath=//android.widget.TextView[@text="Pular"]</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.805933" elapsed="0.001000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>xpath=//android.widget.TextView[@text="Criar minha conta depois"]</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.808932" elapsed="0.000000"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<arg>xpath=//android.widget.TextView[@text="Criar minha conta depois"]</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.810930" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>id=com.android.permissioncontroller:id/permission_deny_button</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.812929" elapsed="0.000000"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<arg>id=com.android.permissioncontroller:id/permission_deny_button</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.822926" elapsed="0.000996"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>xpath=//android.widget.TextView[@text="NÃO, OBRIGADO"]</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.825925" elapsed="0.000000"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<arg>xpath=//android.widget.TextView[@text="NÃO, OBRIGADO"]</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.826921" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>xpath=//android.widget.ScrollView/android.view.ViewGroup/android.widget.HorizontalScrollView[2]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ImageView</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.828921" elapsed="0.000000"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<arg>xpath=//android.widget.ScrollView/android.view.ViewGroup/android.widget.HorizontalScrollView[2]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ImageView</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.829920" elapsed="0.000998"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<kw name="Esperar Até Que Elemento Esteja Visível">
+<msg time="2024-10-20T00:26:09.508159" level="FAIL">No keyword with name 'Esperar Até Que Elemento Esteja Visível' found.</msg>
 <arg>xpath=//android.widget.TextView[@text="Rosas"]</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.834919" elapsed="0.001001"/>
+<status status="FAIL" start="2024-10-20T00:26:09.508159" elapsed="0.003995">No keyword with name 'Esperar Até Que Elemento Esteja Visível' found.</status>
 </kw>
-<kw name="Click Element" owner="AppiumLibrary">
+<kw name="Clicar Elemento">
 <arg>xpath=//android.widget.TextView[@text="Rosas"]</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.839915" elapsed="0.000999"/>
+<status status="NOT RUN" start="2024-10-20T00:26:09.514154" elapsed="0.001000"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>xpath=//android.widget.TextView[@text="Buquê de 24 Rosas Vermelhas e Pink"]</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.841913" elapsed="0.000999"/>
+<kw name="Esperar Até Que Elemento Esteja Visível">
+<arg>xpath=//android.widget.TextView[@text="${PRODUCT_NAME}"]</arg>
+<status status="NOT RUN" start="2024-10-20T00:26:09.518154" elapsed="0.000998"/>
 </kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<arg>xpath=//android.widget.TextView[@text="Buquê de 24 Rosas Vermelhas e Pink"]</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.843911" elapsed="0.000000"/>
+<kw name="Obter Texto">
+<var>${price}</var>
+<arg>xpath=//android.widget.TextView[@text="${PRODUCT_NAME}"]/following-sibling::android.widget.TextView</arg>
+<status status="NOT RUN" start="2024-10-20T00:26:09.520151" elapsed="0.000999"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>xpath=(//android.widget.TextView[@text="Buquê de 24 Rosas Vermelhas e Pink"])[2]</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.846115" elapsed="0.000000"/>
+<kw name="Deve Ser Igual">
+<arg>${price}</arg>
+<arg>${PRODUCT_PRICE}</arg>
+<status status="NOT RUN" start="2024-10-20T00:26:09.522149" elapsed="0.000000"/>
 </kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<arg>xpath=(//android.widget.TextView[@text="Buquê de 24 Rosas Vermelhas e Pink"])[2]</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.847119" elapsed="0.003009"/>
+<kw name="Clicar Elemento">
+<arg>xpath=//android.widget.TextView[@text="${PRODUCT_NAME}"]</arg>
+<status status="NOT RUN" start="2024-10-20T00:26:09.523150" elapsed="0.000000"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>xpath=//android.widget.TextView[@text="R$ 189,90"]</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.853116" elapsed="0.000000"/>
+<kw name="Esperar Até Que Elemento Esteja Visível">
+<arg>xpath=//android.widget.TextView[@text="ADICIONAR AO CARRINHO"]</arg>
+<status status="NOT RUN" start="2024-10-20T00:26:09.523965" elapsed="0.001565"/>
 </kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<arg>xpath=//android.widget.TextView[@text="R$ 189,90"]</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.855118" elapsed="0.000996"/>
+<kw name="Clicar Elemento">
+<arg>xpath=//android.widget.TextView[@text="ADICIONAR AO CARRINHO"]</arg>
+<status status="NOT RUN" start="2024-10-20T00:26:09.525705" elapsed="0.001000"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>class=android.widget.EditText</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.857113" elapsed="0.000000"/>
+<kw name="Clicar Elemento">
+<arg>xpath=//android.widget.TextView[@text="CARRINHO"]</arg>
+<status status="NOT RUN" start="2024-10-20T00:26:09.527705" elapsed="0.000000"/>
 </kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<arg>class=android.widget.EditText</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.859112" elapsed="0.002000"/>
+<kw name="Esperar Até Que Elemento Esteja Visível">
+<arg>xpath=//android.widget.TextView[@text="${PRODUCT_NAME}"]</arg>
+<status status="NOT RUN" start="2024-10-20T00:26:09.528704" elapsed="0.000000"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<arg>xpath=//android.widget.TextView[@text="CONTINUAR"]</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.863110" elapsed="0.000000"/>
+<kw name="Obter Texto">
+<var>${cart_price}</var>
+<arg>xpath=//android.widget.TextView[@text="${PRODUCT_NAME}"]/following-sibling::android.widget.TextView</arg>
+<status status="NOT RUN" start="2024-10-20T00:26:09.531705" elapsed="0.001000"/>
 </kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<arg>xpath=//android.widget.TextView[@text="CONTINUAR"]</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-10-17T22:01:10.870106" elapsed="0.000999"/>
+<kw name="Deve Ser Igual">
+<arg>${cart_price}</arg>
+<arg>${PRODUCT_PRICE}</arg>
+<status status="NOT RUN" start="2024-10-20T00:26:09.534702" elapsed="0.000999"/>
 </kw>
 <kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
-<kw name="Capture Page Screenshot" owner="AppiumLibrary">
-<msg time="2024-10-17T22:01:10.875103" level="FAIL">No application is open</msg>
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" start="2024-10-17T22:01:10.874105" elapsed="0.010992">No application is open</status>
-</kw>
-<msg time="2024-10-17T22:01:10.888096" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
-<msg time="2024-10-17T22:01:10.897091" level="FAIL">No application is open</msg>
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="FAIL" start="2024-10-17T22:01:10.873104" elapsed="0.029422">No application is open</status>
+<status status="PASS" start="2024-10-20T00:26:09.536700" elapsed="1.341399"/>
 </kw>
-<status status="FAIL" start="2024-10-17T22:01:10.773952" elapsed="0.129564">Variable '${REMOTE_URL}' not found.
-
-Also teardown failed:
-No application is open</status>
+<status status="FAIL" start="2024-10-20T00:25:18.206548" elapsed="52.675519">No keyword with name 'Esperar Até Que Elemento Esteja Visível' found.</status>
 </test>
-<status status="FAIL" start="2024-10-17T22:01:10.341639" elapsed="0.565990"/>
+<status status="FAIL" start="2024-10-20T00:25:17.436109" elapsed="53.456821"/>
 </suite>
 <statistics>
 <total>
@@ -169,11 +91,9 @@ No application is open</status>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Giuliana Flores Mobile">Giuliana Flores Mobile</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Selecionar Produto Mobile">Selecionar Produto Mobile</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-10-17T22:01:10.764955" level="ERROR">Error in file 'c:\ITERASYS\ProjetoFinal5\tests\web\mobile\giuliana_flores_mobile.robot' on line 17: Setting variable '${REMOTE_URL}' failed: Environment variable '%{SAUCE_ACCESS_KEY}' not found.</msg>
-<msg time="2024-10-17T22:01:10.888096" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>
